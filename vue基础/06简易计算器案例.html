@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model='s1'>
+
+        <select v-model='opt'>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+
+        <input type="text" v-model='s2'>
+
+        <!-- @click添加一个事件绑定机制    点击运行计算 -->
+        <input type="button" value="=" @click="suanshu">
+
+        <input type="text" v-model='result'>
+
+    </div>
+
+
+    <script>
+        //创建vue实例，得到ViewModel
+        var vue = new Vue({
+            el: '#app',
+            data: {
+                // s1: '0',
+                // s2: '0',
+                result: '0',
+                opt: '+',  //设置初始值
+            },
+            methods: {
+                suanshu() {//opt，s1,s2，result 都要加this   因为作用域不同
+                    switch (this.opt) {
+                        case '+':
+                            this.result = parseInt(this.s1) + parseInt(this.s2);
+                            break;
+                        case '-':
+                            this.result = parseInt(this.s1) - parseInt(this.s2);
+                            break;
+                        case '*':
+                            this.result = parseInt(this.s1) * parseInt(this.s2);
+                            break;
+                        case '/':
+                            this.result = parseInt(this.s1) / parseInt(this.s2);
+                            break;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
