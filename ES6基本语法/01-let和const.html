@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document321</title>
+
+</head>
+
+<body>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+
+    <!-- 声明变量就用let  声明常量就用const -->
+    <script>
+        //let和const声明 变量和常量    var
+        //let
+            //作用域只局限于当前代码块
+            //使用let声明的变量作用域不会被提升
+            //在相同的作用域下不能声明相同的变量
+            //for循环体现let的父子作用域
+
+        /* {
+            var str = "张三";
+            console.log(str);
+
+            let str1 = "李赛";
+            console.log(str1);
+            }
+            console.log("======." + str);
+            console.log("++++++" + str1);
+        */
+
+        /*{
+            console.log(str);
+            let str = "你好";
+        }
+        */
+
+        /*{
+            var str = "你好";
+            var str = "我好";
+            console.log(str);//我好
+
+            let str2 = "hello";
+            let str2 = "嘿嘿嘿";
+            console.log(str2);//报错  所有都不能执行
+        }
+        */
+
+        // var btns = document.querySelectorAll("button");
+        // for (var i = 0; i < btns.length; i++) {
+        //     btns[i].onclick = function () {
+        //         alert("点击了第" + i + "个");
+        //     }
+        // }
+
+        // var btns = document.querySelectorAll("button");
+        // for (var i = 0; i < btns.length; i++) {
+        //     (function (i) {
+        //         btns[i].onclick = function () {
+        //             alert("点击了第" + (i + 1) + "个");
+        //         }
+        //     })(i);//闭包   形成单独的作用域
+        // }
+
+        // let btns = document.querySelectorAll("button");
+        // for (let i = 0; i < btns.length; i++) {
+        //     btns[i].onclick = function () {
+        //         alert("点击了第" + i + "个");
+        //     }
+        // }
+
+        // for (var i = 0; i < 5; i++) {
+        //     var i = 10;
+        //     console.log(i);
+        // }
+
+        // for (let j = 0; j < 5; j++) {
+        //     let j = 20;
+        //     console.log(j);
+        // }
+
+    </script>
+
+    <script>
+        //const
+        //作用域只局限于当前代码块
+        //声明的变量作用域不会被提升
+        //在相同的作用域下不能声明相同的变量
+        //声明的常量必须赋值（）
+
+        // const name = "hello";
+        // name = "你好";
+        // console.log(name);//报错
+
+        const obj = { name: "zhang" };
+        console.log(obj);
+
+        obj.name = "li";
+        console.log(obj);
+
+    </script>
+</body>
+
+</html>

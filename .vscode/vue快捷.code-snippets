@@ -1,0 +1,35 @@
+{"vue代码": {
+	"prefix": "vue",
+	"body": [
+	"<!DOCTYPE html>",
+	"",
+	"<html lang='en'>",
+	"",
+	"<head>",
+		"\t<meta charset=\"UTF-8\">",
+		"\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+		"\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">",
+		"\t<title>Document</title>",
+		"\t<script src=\"./lib/vue.js\"></script>",
+		"</head>",
+		"",
+		"<body>",
+		"\t<div id=\"app\">",
+		"\t\t",
+		"\t</div>",
+		"\t",
+		"\t",
+		"\t<script>",
+		"\t\t//创建vue实例，得到ViewModel",
+		"\t\tvar vue = new Vue({",
+			"\t\t\tel: '#app',",     
+			"\t\t\tdata: {}," ,         
+			"\t\t\tmethods: {}    "  ,   
+			"\t\t});",
+			"\t</script>",
+			"</body>",
+			"",
+			"</html>"
+		]
+		}
+	}

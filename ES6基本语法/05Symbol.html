@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str1 = Symbol();
+        let str2 = Symbol();
+        console.log(str1 === str2);
+        console.log(typeof str1);
+        console.log(typeof str2);
+
+        let str3 = Symbol('name');
+        let str4 = Symbol('name');
+        console.log(str3);
+        console.log(str4);
+        console.log(str3 === str4);
+
+        const obj = {};
+        /* 
+        obj.name = '我爱罗';
+        obj.name = '鸣人';
+        会被覆盖 
+        */
+        obj[Symbol('name')] = '我爱罗';
+        obj[Symbol('name')] = '鸣人';
+        console.log(obj);
+
+
+
+
+    </script>
+</body>
+
+</html>

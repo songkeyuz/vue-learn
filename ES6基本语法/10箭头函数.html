@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //箭头函数
+        //（）=>{}
+        //和之前的函数是一样的  只是写法不一样   形式更加灵活
+        let sum = (num1, num2) => {
+            return num1 + num2;
+        };
+        console.log(sum(25, 25));
+
+        let nameArr = ['无名', '大佛', '黄猿'];
+        nameArr.forEach((value, index) => {
+            console.log(index + ':' + value);
+        });
+
+
+        function demo() {
+            //window对象
+            setTimeout(function () {
+                console.log(this);
+            }, 1000);//1000毫秒后输出
+
+            //指向obj对象了
+            setTimeout(() => {
+                console.log(this);
+            }, 1000);
+        }
+        let obj = {};
+        demo.call(obj);
+
+    </script>
+</body>
+
+</html>

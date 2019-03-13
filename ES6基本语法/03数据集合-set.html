@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let set = new Set(["鸣人", "佐助", "小樱", "鸣人"]);//去重
+        console.log(set);
+        console.log(set.size);//长度
+
+        //四个方法
+
+        //add添加
+
+        // set.add("卡卡西").add("水门");
+        // console.log(set);
+
+        //delete删除
+
+        // console.log(set.delete("小樱"));
+        // console.log(set);
+
+        //has查询是否存在
+
+        // console.log(set.has("鸣人"));
+        // console.log(set.has("鸣人1"));
+
+        //clear清除所有
+
+        console.log(set.clear());//没有返回值   undefined
+        console.log(set);
+
+    </script>
+</body>
+
+</html>

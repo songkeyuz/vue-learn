@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1、形参设置默认值
+        /* ES5中
+        function sum(num1, num2) {
+             num1 = num1 || 20;
+             num2 = num2 || 10;
+             console.log(num1 + num2);
+ 
+         }
+         sum(); 
+         */
+        //ES6中
+        function sum(num1 = 10, num2 = 10) {
+            console.log(num1 + num2);
+        }
+        sum();//可以传参数
+
+
+        //2、参数形式  延展操作符
+        //求所有数字的和  但不知道具体多少个数
+        function sum1() {
+            let result = 0;
+            for (let value of arguments) {
+                result += value;
+            }
+            return result;
+        }
+        console.log(sum1(1, 2, 3, 4, 5));
+
+        //ES6中可以用延展操作符
+        function sum2(name, ...nums) {
+            let result = 0;
+            console.log(name);//可以传其他参数
+            for (let value of nums) {
+                result += value;
+            }
+            return result;
+        }
+        console.log(sum2('嗨喽', 1, 2, 3, 4, 5));
+    </script>
+</body>
+
+</html>

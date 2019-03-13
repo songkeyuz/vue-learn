@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+        let obj1 = { a: 1 }, obj2 = { b: 2 }, obj = {};
+        obj.name = "路飞";//给对象赋值
+        obj[obj1] = "索隆";//把对象作为一个键赋值
+        obj[obj2] = "龙";//会覆盖 “索隆”
+        console.log(obj);
+
+        //对象当中 键无论传什么都会转换成字符串类型
+        console.log(obj1.toString() === obj2.toString()); 
+        */
+
+        //创建一个Map  和对象类似
+        let obj1 = { a: 1 }, obj2 = { b: 2 };
+        const map = new Map([
+            ["name", "佩恩"],
+            ["age", 28],//Number
+            ["sex", "男"],
+            [obj1, "今天心情不太好"],//对象
+            [obj2, "好烦啊"],
+            [[1, 2], "呜呜呜"],//数组
+            //和set一样去重
+            ["name", "饿鬼道"],
+            ["age", 30],
+        ]);
+        console.log(map);
+
+        console.log(map.size);
+
+        //set和get   设置  获取
+        map.set('friends', ['畜生道', '修罗道']);
+        console.log(map);
+
+        console.log(map.get('name'));
+        console.log(map.get(obj1));
+
+        //delete 删除
+
+        //has
+
+        //clear
+
+        //keys()  values()  entries()
+
+        console.log(map.keys());
+        console.log(map.values());
+        console.log(map.entries());
+
+        //遍历
+        map.forEach(function (value, index) {
+            console.log(index + ':' + value);
+        })
+
+
+        //注意事项
+        map.set({}, '我是空对象');
+        map.set({}, '我ye是空对象');
+        console.log({} === {});
+
+    </script>
+</body>
+
+</html>

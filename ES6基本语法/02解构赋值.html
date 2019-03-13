@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1、数组的结构赋值
+
+        /* let name = "卡卡西", age = 24, sex = "男";
+        let [name, age, sex] = ["自来也", 34, "男"];
+        name = "大蛇丸";
+        console.log(name);
+        console.log(age);
+        console.log(sex);
+        */
+
+        /* 
+        let [arr1, [arr2, arr3, [arr4, arr5]]] = [1, [2, 3, [4, 5]]];
+        console.log(arr1, arr2, arr3, arr4, arr5);
+        */
+
+        /* 
+        let [a, ,c]=[1,2,3];
+        console.log(a);
+        console.log(c);
+        */
+
+
+        //2、对象的解构赋值
+
+        /*
+        let { name, age, sex } = { name : "卡卡西", age : 24, sex : "男" };
+        console.log(name);
+        console.log(age);
+        console.log(sex);
+        */
+
+        /*
+        let { name, age, friends, pet } = { name: "卡卡西", age: 24, friends: ["琳", "宇智波斑", "水门"], pet: { name: "帕克", age: 10 } };
+        console.log(name);
+        console.log(age);
+        console.log(friends);
+        console.log(pet);
+        */
+
+        //基本类型的解构赋值
+
+        let [a, b, c, d, e] = "我是中国人";//Number不能解析
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+        console.log(e);
+
+    </script>
+</body>
+
+</html>
