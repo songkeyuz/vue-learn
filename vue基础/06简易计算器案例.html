@@ -36,13 +36,13 @@
         var vue = new Vue({
             el: '#app',
             data: {
-                // s1: '0',
-                // s2: '0',
-                result: '0',
-                opt: '+',  //设置初始值
+                s1: '',
+                s2: '',
+                result: '',
+                opt: '+', //设置初始值
             },
             methods: {
-                suanshu() {//opt，s1,s2，result 都要加this   因为作用域不同
+                suanshu() { //opt，s1,s2，result 都要加this   因为作用域不同
                     switch (this.opt) {
                         case '+':
                             this.result = parseInt(this.s1) + parseInt(this.s2);
